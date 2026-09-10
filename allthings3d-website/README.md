@@ -26,6 +26,8 @@ Drop the folder on any host and it works.
 | `assets/js/atd-order.js` | Order page: file drop, mesh preview, estimator, enquiry handoff |
 | `assets/img/logo/` | The brand logo files |
 | `_build/build.py` | Optional page generator (see below) |
+| `_build/preview.py` | Bundles the whole site into one shareable .html file |
+| `preview/allthings3d-preview.html` | That bundle — one file, opens anywhere, no server needed |
 | `CNAME`, `robots.txt`, `sitemap.xml`, `site.webmanifest` | Hosting and SEO files |
 
 ---
@@ -94,6 +96,22 @@ footer and meta tags. **Pick one.** If you edit the HTML by hand and then run
 the generator, your hand edits are overwritten.
 
 ---
+
+## Just want to look at it?
+
+Open **`preview/allthings3d-preview.html`** — double-click it and the entire
+site opens in your browser. Every page, the animations and the STL price
+estimator all work, with no web server and no internet connection. It is one
+self-contained file, so you can email it or drop it into a chat.
+
+That file is a **viewing copy**, not the site. The real site is the folder of
+separate pages, and that is what gets deployed. Regenerate the copy after any
+content change:
+
+```bash
+python3 _build/build.py      # rebuild the pages
+python3 _build/preview.py    # rebundle the preview
+```
 
 ## Publishing it on allthings3d.com
 

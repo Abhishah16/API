@@ -195,19 +195,19 @@ window.ATD_CONFIG = {
 
   /* ------------------------------------------------------ step timeline */
   function steps() {
-    var wrap = $('.steps');
-    if (!wrap) return;
-    var fill = $('.steps__fill', wrap);
-    var items = $$('.step', wrap);
+    var wraps = $$('.steps');
+    if (!wraps.length) return;
     function update() {
-      var r = wrap.getBoundingClientRect();
-      var mid = window.innerHeight * 0.62;
-      var p = (mid - r.top) / r.height;
-      p = Math.max(0, Math.min(1, p));
-      if (fill) fill.style.height = (p * (r.height - 24)) + 'px';
-      items.forEach(function (s) {
-        var sr = s.getBoundingClientRect();
-        s.classList.toggle('is-active', sr.top < mid);
+      wraps.forEach(function (wrap) {
+        var fill = $('.steps__fill', wrap);
+        var r = wrap.getBoundingClientRect();
+        if (!r.height) return;
+        var mid = window.innerHeight * 0.62;
+        var p = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+        if (fill) fill.style.height = (p * (r.height - 24)) + 'px';
+        $$('.step', wrap).forEach(function (s) {
+          s.classList.toggle('is-active', s.getBoundingClientRect().top < mid);
+        });
       });
     }
     window.addEventListener('scroll', update, { passive: true });

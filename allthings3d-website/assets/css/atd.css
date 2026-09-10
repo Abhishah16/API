@@ -6,6 +6,8 @@
 
 /* ---------- Tokens ---------- */
 :root {
+  color-scheme: light;
+
   --print-blue: #0166AE;
   --filament-black: #22272A;
   --ember: #EA6A32;
