@@ -1,0 +1,12 @@
+{
+  "name": "All Things 3D",
+  "short_name": "All Things 3D",
+  "description": "Custom 3D printing in Mumbai — because your ideas deserve to exist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F7FB",
+  "theme_color": "#0166AE",
+  "icons": [
+    { "src": "assets/img/favicon.png", "sizes": "528x655", "type": "image/png", "purpose": "any" }
+  ]
+}

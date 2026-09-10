@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload your idea — instant 3D preview and price estimate | All Things 3D</title>
+  <meta name="description" content="Drop an STL or OBJ file and see it rendered instantly with a live price estimate, or simply describe what you want. Quote and lead time back within one working day.">
+  <link rel="canonical" href="https://allthings3d.com/order.html">
+  <meta name="theme-color" content="#0166AE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Upload your idea — instant 3D preview and price estimate | All Things 3D">
+  <meta property="og:description" content="Drop an STL or OBJ file and see it rendered instantly with a live price estimate, or simply describe what you want. Quote and lead time back within one working day.">
+  <meta property="og:url" content="https://allthings3d.com/order.html">
+  <meta property="og:site_name" content="All Things 3D">
+  <meta property="og:image" content="https://allthings3d.com/assets/img/logo/atd-logo-full-transparent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/atd.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "All Things 3D",
+    "slogan": "Because your ideas deserve to exist",
+    "description": "Custom 3D printing in Mumbai — corporate orders, end-to-end product development, contract manufacturing, bulk orders and OEM white-label production.",
+    "url": "https://allthings3d.com",
+    "email": "info.allthings3d@gmail.com",
+    "telephone": "+91-76660-04531",
+    "image": "https://allthings3d.com/assets/img/logo/atd-logo-full-transparent.png",
+    "logo": "https://allthings3d.com/assets/img/logo/atd-logo-horizontal-transparent.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+    "areaServed": "IN",
+    "sameAs": ["https://www.instagram.com/allthings3d.in"],
+    "priceRange": "₹₹"
+  }
+  </script>
+  <script src="assets/js/atd-3d.js" defer></script>
+  <script src="assets/js/atd.js" defer></script>
+  <script src="assets/js/atd-order.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-rail"><div class="progress-rail__fill"></div></div>
+  <header class="nav">
+    <div class="shell nav__inner">
+      <a class="nav__logo" href="index.html" aria-label="All Things 3D — home">
+        <img src="assets/img/logo/atd-logo-horizontal-transparent.png" alt="All Things 3D" width="954" height="299">
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span></button>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+          <a class="nav__link" href="products.html">Products</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="oem.html">OEM &amp; Bulk</a>
+          <a class="nav__link" href="capabilities.html">Capabilities</a>
+          <a class="nav__link" href="gallery.html">Gallery</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--ember btn--sm nav__cta" href="order.html">Upload your idea</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="pagehead">
+      <div class="shell">
+        <p class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Upload your idea</p>
+        <p class="eyebrow">Upload · Quote · Print</p>
+        <h1>Upload your idea</h1>
+        <p>Drop a 3D file and watch it render right here, or just describe what you want. Either way you get a real price and a real date back within one working day.</p>
+      </div>
+    </section>
+
+    <section class="section section--mist">
+      <div class="shell">
+        <div class="split" style="align-items:start">
+          <div class="reveal">
+            <form id="orderForm" novalidate>
+              <div class="card card--flat" style="margin-bottom:22px">
+                <p class="eyebrow" style="margin-bottom:10px">Step 1</p>
+                <h3>Your file, or your idea</h3>
+                <p class="muted" style="font-size:15px">STL and OBJ files preview instantly below and measure themselves.
+                  STEP, 3MF, images, PDFs and ZIPs are accepted too — we just open them at our end.</p>
+                <div class="dropzone" id="dropzone">
+                  <div class="dropzone__icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4m0 0L7 9m5-5 5 5M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"/></svg></div>
+                  <strong>Drop a file here, or tap to browse</strong>
+                  <small>STL · OBJ · 3MF · STEP · JPG · PNG · PDF · ZIP</small>
+                  <input type="file" id="fileInput" name="file" accept=".stl,.obj,.3mf,.step,.stp,.igs,.iges,.jpg,.jpeg,.png,.pdf,.zip,.svg,.dxf">
+                </div>
+                <p class="mono hidden" id="fileLabel" style="margin:12px 0 0;font-size:13px;color:var(--blue-700)"></p>
+
+                <div class="viewer" id="viewer">
+                  <canvas id="viewerCanvas"></canvas>
+                  <div class="viewer__hint" id="viewerHint">Your model appears here</div>
+                  <div class="viewer__meta hidden" id="viewerMeta"></div>
+                </div>
+
+                <div class="field" style="margin-top:20px">
+                  <label for="brief">Tell us about it</label>
+                  <span class="hint">What it is, what it is for, how it will be used, and anything that must be exact.
+                    If you have no file at all, describe it here — that is enough to start.</span>
+                  <textarea id="brief" name="brief_text" placeholder="Example: I want 120 keychains with our company logo and each person's name on the back, for a sales conference on the 14th of next month. Blue and white if possible."></textarea>
+                </div>
+              </div>
+
+              <div class="card card--flat" style="margin-bottom:22px">
+                <p class="eyebrow" style="margin-bottom:10px">Step 2</p>
+                <h3>How you want it made</h3>
+                <p class="muted" style="font-size:15px">Not sure? Leave the defaults — the estimate updates live and
+                  we will recommend the right combination when we quote.</p>
+
+                <div class="field--row" style="margin-top:18px">
+                  <div class="field">
+                    <label for="material">Material</label>
+                    <select id="material" name="material">
+                      <option value="pla" selected>PLA — display, gifting, best finish</option>
+                      <option value="petg">PETG — everyday functional, outdoor</option>
+                      <option value="abs">ABS / ASA — heat and UV resistant</option>
+                      <option value="tpu">TPU — flexible, rubber-like</option>
+                      <option value="pacf">Nylon / PA-CF — structural, hard-wearing</option>
+                      <option value="resin">Resin — fine detail, miniatures</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="quality">Layer height</label>
+                    <select id="quality" name="quality">
+                      <option value="draft">0.28 mm — draft, fastest</option>
+                      <option value="standard" selected>0.20 mm — standard</option>
+                      <option value="fine">0.12 mm — fine</option>
+                      <option value="ultra">0.08 mm — ultra detail</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field--row">
+                  <div class="field">
+                    <label for="finish">Finish</label>
+                    <select id="finish" name="finish">
+                      <option value="raw">As printed</option>
+                      <option value="cleaned" selected>Cleaned, supports removed</option>
+                      <option value="sanded">Sanded smooth</option>
+                      <option value="painted">Primed and painted</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty" name="qty" min="1" step="1" value="1" placeholder="1">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="infill">Infill &mdash; <span class="mono" id="infillOut">20%</span></label>
+                  <span class="hint">Low for display pieces, high for parts that take load. 20% suits almost everything.</span>
+                  <input type="range" id="infill" name="infill" min="0" max="100" step="5" value="20">
+                </div>
+
+                <div class="field">
+                  <label>Approximate size in mm <span class="hint" style="font-weight:400">(filled in automatically if you upload an STL or OBJ)</span></label>
+                  <div class="field--row" style="grid-template-columns:repeat(3,1fr)">
+                    <input type="number" id="dimX" name="dimX" placeholder="Length" min="0" step="0.1">
+                    <input type="number" id="dimY" name="dimY" placeholder="Width" min="0" step="0.1">
+                    <input type="number" id="dimZ" name="dimZ" placeholder="Height" min="0" step="0.1">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card--flat">
+                <p class="eyebrow" style="margin-bottom:10px">Step 3</p>
+                <h3>Where to send the quote</h3>
+                <div class="field--row" style="margin-top:18px">
+                  <div class="field">
+                    <label for="name">Your name <span class="req">*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Name" required>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone / WhatsApp <span class="req">*</span></label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="10-digit mobile" required>
+                  </div>
+                </div>
+                <div class="field--row">
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+                  </div>
+                  <div class="field">
+                    <label for="company">Company <span class="hint" style="font-weight:400">(if this is a business order)</span></label>
+                    <input type="text" id="company" name="company" autocomplete="organization" placeholder="Company name">
+                  </div>
+                </div>
+                <div class="field--row">
+                  <div class="field">
+                    <label for="orderType">Type of order</label>
+                    <select id="orderType" name="orderType">
+                      <option>Personal / one-off</option>
+                      <option>Gift or keepsake</option>
+                      <option>Corporate gifting</option>
+                      <option>Prototype / product development</option>
+                      <option>Bulk order</option>
+                      <option>Contract manufacturing</option>
+                      <option>OEM / white-label</option>
+                      <option>Spare or replacement part</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="deadline">Needed by</label>
+                    <input type="date" id="deadline" name="deadline">
+                  </div>
+                </div>
+
+                <p class="note note--ember hidden" id="formNote" style="margin-top:18px"></p>
+
+                <div class="btn-row" style="margin-top:22px">
+                  <button class="btn btn--ember" type="button" id="sendWhatsApp">Send on WhatsApp <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.5A8.4 8.4 0 1 1 8 20.2z"/><path d="M8.5 9.2c.2 1.4 1 2.6 2 3.5s2.2 1.5 3.5 1.7l1-1.4 1.8.9-.3 1.6c-1.9.4-4-.5-5.6-2s-2.4-3.7-2-5.6l1.6-.3.9 1.8z"/></svg></button>
+                  <button class="btn btn--ghost" type="button" id="sendEmail">Send by email</button>
+                  <button class="btn btn--ghost" type="button" id="copyBrief">Copy the brief</button>
+                </div>
+                <p class="muted" style="font-size:14px;margin:16px 0 0">
+                  WhatsApp is fastest — the message opens pre-filled with everything above, and you attach your
+                  file in the chat. Nothing on this page is sent anywhere until you press one of these buttons.
+                </p>
+
+                <div class="note hidden" id="afterSend" style="margin-top:18px">
+                  <strong>One last step:</strong> attach your file in the chat or email that just opened, and send it.
+                  We reply within one working day.
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <div class="estimate reveal" id="estimateBox" style="position:sticky;top:100px">
+              <p class="eyebrow" style="margin-bottom:8px">Live estimate</p>
+              <p class="mono" style="font-size:12px;letter-spacing:.1em;color:var(--ink-400);margin:0">INDICATIVE RANGE</p>
+              <p class="estimate__num estimate__num--empty" id="estRange">Add a size to see a number</p>
+              <p class="mono" id="estUnit" style="font-size:13px;color:var(--blue-200);margin:0 0 18px">&mdash;</p>
+              <div class="estimate__row"><span>Quantity</span><b id="estQty">&mdash;</b></div>
+              <div class="estimate__row"><span>Material used</span><b id="estWeight">&mdash;</b></div>
+              <div class="estimate__row"><span>Machine time</span><b id="estTime">&mdash;</b></div>
+              <p class="mono hidden" id="estEmpty" style="font-size:12px;color:var(--ink-400);margin-top:16px;letter-spacing:.06em">
+                UPLOAD A FILE OR ENTER A SIZE TO SEE A NUMBER
+              </p>
+              <p style="font-size:13.5px;color:var(--ink-400);margin:18px 0 0;line-height:1.55">
+                A guide, not a quotation. It does not know about supports, multi-colour work, assembly, inserts
+                or packaging. Your real price comes back within one working day and is usually close to this.
+              </p>
+            </div>
+
+            <div class="card card--flat reveal" style="margin-top:20px">
+              <h3 style="font-size:19px">Rather just talk?</h3>
+              <ul class="contact-list" style="margin-top:14px">
+                <li class="contact-row">
+                  <span class="contact-row__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.5A8.4 8.4 0 1 1 8 20.2z"/><path d="M8.5 9.2c.2 1.4 1 2.6 2 3.5s2.2 1.5 3.5 1.7l1-1.4 1.8.9-.3 1.6c-1.9.4-4-.5-5.6-2s-2.4-3.7-2-5.6l1.6-.3.9 1.8z"/></svg></span>
+                  <span><b>WhatsApp</b><a data-wa href="#">+91 76660 04531</a></span>
+                </li>
+                <li class="contact-row">
+                  <span class="contact-row__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg></span>
+                  <span><b>Email</b><a data-mail="text" href="mailto:info.allthings3d@gmail.com">info.allthings3d@gmail.com</a></span>
+                </li>
+                <li class="contact-row">
+                  <span class="contact-row__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                  <span><b>Instagram</b><a data-ig href="https://www.instagram.com/allthings3d.in">@allthings3d.in</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white section--tight">
+      <div class="shell">
+        <div class="sec-head center">
+          <p class="eyebrow">What happens next</p>
+          <h2>After you press send</h2>
+        </div>
+        <div class="grid grid--4">
+        <article class="card tilt reveal">
+          <span class="card__num">01</span><div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>We read it properly</h3>
+          <p>A person looks at your file or description and checks it can actually be printed the way you want it.</p>
+        </article>
+        <article class="card tilt reveal">
+          <span class="card__num">02</span><div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>You get a real answer</h3>
+          <p>Within one working day: material recommendation, finish, lead time and a firm price. Questions if we have any.</p>
+        </article>
+        <article class="card tilt reveal">
+          <span class="card__num">03</span><div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></div>
+          <h3>You approve</h3>
+          <p>Nothing is printed and nothing is charged until you have said yes to the price and the date.</p>
+        </article>
+        <article class="card tilt reveal">
+          <span class="card__num">04</span><div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></svg></div>
+          <h3>It gets made and sent</h3>
+          <p>Printed, finished, checked, photographed and dispatched anywhere in India.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="assets/img/logo/atd-logo-horizontal-white.png" alt="All Things 3D" width="954" height="299">
+          <p>Because your ideas deserve to exist. Custom 3D printing, product development and small-batch manufacturing — from a single keepsake to a thousand-piece corporate order.</p>
+          <div class="footer__social">
+            <a data-ig href="https://www.instagram.com/allthings3d.in" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a data-wa href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.5A8.4 8.4 0 1 1 8 20.2z"/><path d="M8.5 9.2c.2 1.4 1 2.6 2 3.5s2.2 1.5 3.5 1.7l1-1.4 1.8.9-.3 1.6c-1.9.4-4-.5-5.6-2s-2.4-3.7-2-5.6l1.6-.3.9 1.8z"/></svg></a>
+            <a data-mail href="mailto:info.allthings3d@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="oem.html">OEM &amp; white-label</a></li>
+            <li><a href="oem.html#bulk">Bulk orders</a></li>
+            <li><a href="services.html#contract">Contract manufacturing</a></li>
+            <li><a href="services.html#corporate">Corporate gifting</a></li>
+            <li><a href="services.html#development">Product development</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Talk to us</h4>
+          <ul>
+            <li><a data-mail="text" href="mailto:info.allthings3d@gmail.com">info.allthings3d@gmail.com</a></li>
+            <li><a data-tel="text" href="tel:+917666004531">+91 76660 04531</a></li>
+            <li><a data-wa href="#">WhatsApp us</a></li>
+            <li><a data-ig href="https://www.instagram.com/allthings3d.in">@allthings3d.in</a></li>
+            <li style="margin-top:14px"><a href="order.html">Upload your idea &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> All Things 3D. Mumbai, India.</span>
+        <span><a href="faq.html">FAQ</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a> &nbsp;·&nbsp; <a href="order.html">Get a quote</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* All Things 3D — design tokens, colour system v1.0, locked 16 Aug 2026.
+   Generated from atd_brand.py. Edit the engine, not this file. */
+:root {
+  /* Core */
+  --atd-print-blue: #0166AE;
+  --atd-filament-black: #22272A;
+  --atd-ember: #EA6A32;
+  /* Blue */
+  --atd-blue-50: #EDF5FB;
+  --atd-blue-100: #D4E8F6;
+  --atd-blue-200: #A9CFEC;
+  --atd-blue-300: #74B0DE;
+  --atd-blue-400: #2E8FCE;
+  --atd-blue-500: #0166AE;
+  --atd-blue-600: #015894;
+  --atd-blue-700: #014678;
+  --atd-blue-800: #01355A;
+  --atd-blue-900: #02243D;
+  /* Ember */
+  --atd-ember-50: #FEF4EE;
+  --atd-ember-100: #FBE2D2;
+  --atd-ember-200: #F7C3A4;
+  --atd-ember-300: #F3A175;
+  --atd-ember-400: #F08350;
+  --atd-ember-500: #EA6A32;
+  --atd-ember-600: #C9521F;
+  --atd-ember-700: #A24117;
+  --atd-ember-800: #7A3111;
+  --atd-ember-900: #52210C;
+  /* Ink */
+  --atd-ink-50: #F6F8F9;
+  --atd-ink-100: #EBEFF1;
+  --atd-ink-200: #D8DEE2;
+  --atd-ink-300: #B6BFC5;
+  --atd-ink-400: #8A959C;
+  --atd-ink-500: #6B767D;
+  --atd-ink-600: #525C62;
+  --atd-ink-700: #3D454A;
+  --atd-ink-800: #2E3437;
+  --atd-ink-900: #22272A;
+  /* Surfaces */
+  --atd-mist: #F2F7FB;
+  --atd-cloud: #F6F8F9;
+  --atd-sand: #FCF6F1;
+  --atd-white: #FFFFFF;
+  /* Semantic */
+  --atd-success: #2E9E6B;
+  --atd-warning: #E8A317;
+  --atd-error: #D64550;
+  --atd-info: #0166AE;
+  --atd-success-text: #1F7A50;
+  --atd-warning-text: #8A5A00;
+  --atd-error-text: #B03039;
+  --atd-info-text: #014678;
+
+  /* Type */
+  --atd-font-head: "Montserrat", "Calibri", sans-serif;
+  --atd-font-body: "Inter", "Calibri", sans-serif;
+  --atd-font-mono: "IBM Plex Mono", "Consolas", monospace;
+
+  /* Web type scale */
+  --atd-h1: 56px;  --atd-h1-tracking: -1px;
+  --atd-h2: 40px;  --atd-h3: 28px;
+  --atd-body: 18px; --atd-body-leading: 1.6;
+  --atd-caption: 14px;
+
+  /* Spacing — 8px base */
+  --atd-space-1: 8px;  --atd-space-2: 16px; --atd-space-3: 24px;
+  --atd-space-4: 32px; --atd-space-6: 48px; --atd-space-8: 64px;
+  --atd-radius: 10px;
+}
+
+/* Never start a page on bare white. */
+body { background: var(--atd-mist); color: var(--atd-ink-900);
+       font-family: var(--atd-font-body); }
+h1, h2, h3 { font-family: var(--atd-font-head); font-weight: 700;
+             color: var(--atd-filament-black); }
+code, .spec { font-family: var(--atd-font-mono); }
+
+/* Ember as text on a light background must drop to 700 to pass AA. */
+.cta { background: var(--atd-ember); color: #fff; font-size: 18px; }
+.price { color: var(--atd-ember-700); }
