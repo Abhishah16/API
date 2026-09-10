@@ -1005,7 +1005,7 @@ ORDER = f"""{pagehead('Upload your idea', 'Upload · Quote · Print', 'Upload yo
 
     <section class="section section--mist">
       <div class="shell">
-        <div class="split" style="align-items:start">
+        <div class="split" style="align-items:stretch">
           <div class="reveal">
             <form id="orderForm" novalidate>
               <div class="card card--flat" style="margin-bottom:22px">
@@ -1160,7 +1160,8 @@ ORDER = f"""{pagehead('Upload your idea', 'Upload · Quote · Print', 'Upload yo
           </div>
 
           <div>
-            <div class="estimate reveal" id="estimateBox" style="position:sticky;top:100px">
+            <div class="order-aside">
+            <div class="estimate reveal" id="estimateBox">
               <p class="eyebrow" style="margin-bottom:8px">Live estimate</p>
               <p class="mono" style="font-size:12px;letter-spacing:.1em;color:var(--ink-400);margin:0">INDICATIVE RANGE</p>
               <p class="estimate__num estimate__num--empty" id="estRange">Add a size to see a number</p>
@@ -1193,6 +1194,7 @@ ORDER = f"""{pagehead('Upload your idea', 'Upload · Quote · Print', 'Upload yo
                   <span><b>Instagram</b><a data-ig href="{INSTAGRAM}">@allthings3d.in</a></span>
                 </li>
               </ul>
+            </div>
             </div>
           </div>
         </div>

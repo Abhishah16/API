@@ -562,6 +562,11 @@ td .mono, .table-wrap .mono { font-size: 14px; }
   text-transform: uppercase; padding: 20px;
 }
 
+/* The estimate and the contact card travel together, so the card can never
+   scroll up over a sticky panel. */
+.order-aside { position: sticky; top: calc(var(--nav-h) + 20px); }
+@media (max-width: 900px) { .order-aside { position: static; } }
+
 .estimate {
   background: var(--filament-black); color: #fff; border-radius: var(--radius-lg);
   padding: 26px; position: relative; overflow: hidden;
