@@ -13,7 +13,8 @@
     "covid"
   ],
   "eslintIgnore": [
-    "**/*.spec.*"
+    "**/*.spec.*",
+    "allthings3d-website/**"
   ],
   "scripts": {
     "start": "node server.js",

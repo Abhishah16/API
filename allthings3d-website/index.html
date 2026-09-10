@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Things 3D — Custom 3D Printing in Mumbai | Upload your idea, we make it</title>
+  <meta name="description" content="Custom 3D printing in Mumbai. Corporate orders, end-to-end product development, contract manufacturing, bulk orders and OEM white-label production. Upload a file or just describe the idea — quote back in one working day.">
+  <link rel="canonical" href="https://allthings3d.com/">
+  <meta name="theme-color" content="#0166AE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="All Things 3D — Custom 3D Printing in Mumbai | Upload your idea, we make it">
+  <meta property="og:description" content="Custom 3D printing in Mumbai. Corporate orders, end-to-end product development, contract manufacturing, bulk orders and OEM white-label production. Upload a file or just describe the idea — quote back in one working day.">
+  <meta property="og:url" content="https://allthings3d.com/">
+  <meta property="og:site_name" content="All Things 3D">
+  <meta property="og:image" content="https://allthings3d.com/assets/img/logo/atd-logo-full-transparent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/atd.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "All Things 3D",
+    "slogan": "Because your ideas deserve to exist",
+    "description": "Custom 3D printing in Mumbai — corporate orders, end-to-end product development, contract manufacturing, bulk orders and OEM white-label production.",
+    "url": "https://allthings3d.com",
+    "email": "info.allthings3d@gmail.com",
+    "telephone": "+91-76660-04531",
+    "image": "https://allthings3d.com/assets/img/logo/atd-logo-full-transparent.png",
+    "logo": "https://allthings3d.com/assets/img/logo/atd-logo-horizontal-transparent.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+    "areaServed": "IN",
+    "sameAs": ["https://www.instagram.com/allthings3d.in"],
+    "priceRange": "₹₹"
+  }
+  </script>
+  <script src="assets/js/atd-3d.js" defer></script>
+  <script src="assets/js/atd.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress-rail"><div class="progress-rail__fill"></div></div>
+  <header class="nav">
+    <div class="shell nav__inner">
+      <a class="nav__logo" href="index.html" aria-label="All Things 3D — home">
+        <img src="assets/img/logo/atd-logo-horizontal-transparent.png" alt="All Things 3D" width="954" height="299">
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span></button>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+          <a class="nav__link" href="products.html">Products</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="oem.html">OEM &amp; Bulk</a>
+          <a class="nav__link" href="capabilities.html">Capabilities</a>
+          <a class="nav__link" href="gallery.html">Gallery</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--ember btn--sm nav__cta" href="order.html">Upload your idea</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero__grid">
+        <div>
+          <p class="hero__badge"><span class="dot"></span> Mumbai &nbsp;·&nbsp; Shipping across India</p>
+          <h1>If you can imagine it,<br><span class="grad">we can print it.</span></h1>
+          <p class="hero__lede">Upload a photo, a sketch, a CAD file — or just tell us the idea in a sentence.
+            We handle design, printing, finishing and delivery. One piece or ten thousand.</p>
+          <div class="btn-row" style="margin-top:30px">
+            <a class="btn btn--ember" href="order.html">Upload your idea <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a class="btn btn--onDark" href="products.html">See what we make</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><b data-count="24" data-suffix="h">24h</b><span>Quote turnaround</span></div>
+            <div class="hero__stat"><b data-count="10" data-suffix="+">10+</b><span>Materials</span></div>
+            <div class="hero__stat"><b>1 pc</b><span>Minimum order</span></div>
+            <div class="hero__stat"><b>7&ndash;10</b><span>Days typical lead</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="stage reveal">
+            <span class="stage__tag">Live print preview</span>
+            <canvas id="heroPrint" aria-label="Animation of an object being 3D printed layer by layer"></canvas>
+            <div class="stage__hud">
+              <span>Model <b id="hudName">Twisted vase</b></span>
+              <span>Layer <b id="hudLayer">0/54</b></span>
+              <span><b id="hudPct">0%</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track"><div class="marquee__group"><span class="marquee__item">FDM printing</span><span class="marquee__item">Resin / SLA detail</span><span class="marquee__item">Lithophane lamps</span><span class="marquee__item">Corporate gifting</span><span class="marquee__item">Contract manufacturing</span><span class="marquee__item">OEM &amp; white-label</span><span class="marquee__item">Bulk orders</span><span class="marquee__item">3D scanning to print</span><span class="marquee__item">CAD &amp; design</span><span class="marquee__item">Rapid prototyping</span><span class="marquee__item">Jigs &amp; fixtures</span><span class="marquee__item">Short-run production</span><span class="marquee__item">Post-processing &amp; paint</span><span class="marquee__item">Packaging &amp; dispatch</span></div></div>
+    </div>
+
+    <section class="section section--mist">
+      <div class="shell">
+        <div class="sec-head center">
+          <p class="eyebrow">What we do</p>
+          <h2>One workshop, from a single keepsake to a production run</h2>
+          <p class="lede">Most people find us for a gift. Most businesses stay for the manufacturing.
+            Both start the same way — you send us the idea, we tell you exactly what it will cost and how long it takes.</p>
+        </div>
+        <div class="grid grid--3">
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></div>
+          <h3>Corporate orders</h3>
+          <p>Branded gifting, awards, desk pieces, event giveaways and onboarding kits — designed around your logo and produced to a deadline you can plan around.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19"/></svg></div>
+          <h3>End-to-end product development</h3>
+          <p>Napkin sketch to shelf-ready product. Concept, CAD, prototype, iteration, tooling-free production and packaging, all under one roof.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 21V10l6 4V10l6 4V6l4-3v18M8 21v-4h3v4"/></svg></div>
+          <h3>Contract manufacturing</h3>
+          <p>You own the design, we own the machines. Recurring production of your parts to a fixed spec, drawing and quality standard.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v8a2 2 0 0 1-1 1.7l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 3 16V8a2 2 0 0 1 1-1.7l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 21 8z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></div>
+          <h3>Bulk orders</h3>
+          <p>Hundreds to thousands of identical pieces at per-unit rates that fall as volume rises. Staggered dispatch if you would rather not warehouse it all.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>
+          <h3>OEM &amp; white-label</h3>
+          <p>Printed, finished and packed under your brand. Your box, your insert, your label — no mention of us anywhere in it.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+          <h3>Custom one-offs</h3>
+          <p>Lithophane lamps, keepsakes, replacement parts, cosplay props, models. The pieces that only exist because somebody asked.</p>
+        </article>
+        </div>
+        <div class="center" style="margin-top:34px">
+          <a class="link-arrow reveal" href="services.html">See how each one works <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="shell">
+        <div class="split">
+          <div class="reveal">
+            <p class="eyebrow">The simple version</p>
+            <h2>Three steps. No jargon.</h2>
+            <p class="lede">You do not need a CAD file, a technical drawing, or any idea what PETG is.
+              If you can describe it or show us a picture of it, that is enough to start.</p>
+            <div class="note" style="margin:24px 0">
+              <strong>No file? No problem.</strong> Roughly half of what leaves our workshop started as a
+              WhatsApp photo or a hand sketch. We model it for you and show you a render before anything is printed.
+            </div>
+            <div class="btn-row">
+              <a class="btn" href="order.html">Start your order</a>
+              <a class="btn btn--ghost" href="faq.html">Read the FAQ</a>
+            </div>
+          </div>
+          <div>
+      <div class="steps">
+        <div class="steps__fill"></div>
+        <div class="step reveal">
+          <div class="step__dot">01</div>
+          <div><h3>Send us the idea</h3><p>A photo, a sketch, a link, an STL, a paragraph. Whatever you have. Upload it on the order page or send it straight to WhatsApp.</p></div>
+        </div>
+        <div class="step reveal">
+          <div class="step__dot">02</div>
+          <div><h3>We come back with a price</h3><p>Within one working day: whether it can be printed, the material we recommend, the finish, the lead time and a firm quote.</p></div>
+        </div>
+        <div class="step reveal">
+          <div class="step__dot">03</div>
+          <div><h3>It gets made and delivered</h3><p>You approve, we print, finish and quality-check it, then it ships anywhere in India. Bulk orders can be staggered across dates.</p></div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cloud">
+      <div class="shell">
+        <div class="sec-head">
+          <p class="eyebrow">Products</p>
+          <h2>A sample of what comes off the bed</h2>
+          <p class="lede">Every one of these started as somebody's idea. Hover a piece to spin it.</p>
+        </div>
+        <div class="tiles">
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="lamp" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Personalised</span>
+            <h3>Lithophane lamps &amp; frames</h3>
+            <p>Your photograph, printed as a thin panel that reveals itself in full detail the moment the light goes on.</p>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="tag" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Gifting</span>
+            <h3>Keychains &amp; name tags</h3>
+            <p>Names, logos, dates, QR codes. The easiest first order, and the one that turns into a bulk order.</p>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="gear" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Functional</span>
+            <h3>Working parts &amp; spares</h3>
+            <p>Gears, brackets, housings, jigs and the discontinued part nobody stocks any more.</p>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="figurine" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Keepsakes</span>
+            <h3>Figurines &amp; miniatures</h3>
+            <p>Characters, mascots, cake toppers, wedding couples and gaming miniatures in fine-detail resin.</p>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="planter" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Home</span>
+            <h3>Planters &amp; decor</h3>
+            <p>Vases, planters, lamp shades, wall panels and organisers in a finish that suits the room.</p>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="all">
+          <div class="tile__art"><canvas data-model="dome" data-spin="0.7" aria-hidden="true"></canvas></div>
+          <div class="tile__body">
+            <span class="tile__kicker">Professional</span>
+            <h3>Architectural models</h3>
+            <p>Massing models, site plans and presentation pieces at the scale your client needs to see.</p>
+          </div>
+        </article>
+        </div>
+        <div class="center" style="margin-top:36px">
+          <a class="btn btn--ghost reveal" href="products.html">Browse all products <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="shell">
+        <div class="split split--rev">
+          <div class="reveal">
+            <p class="eyebrow">For business</p>
+            <h2>Manufacturing without the tooling bill</h2>
+            <p class="lede">Injection moulding makes sense at fifty thousand pieces. Below that, the mould
+              costs more than the parts. 3D printing skips the tooling entirely — so a design change on Tuesday
+              is in production on Wednesday, and a run of two hundred is genuinely viable.</p>
+            <ul class="stack-sm" style="list-style:none;padding:0;margin:22px 0">
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg> &nbsp;No mould cost, no minimum of ten thousand</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg> &nbsp;Design revisions between batches at no tooling penalty</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg> &nbsp;NDA signed before your files ever open</li>
+              <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg> &nbsp;Consistent spec, batch after batch, with dimensional checks</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn" href="oem.html">OEM &amp; bulk orders <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a class="btn btn--onDark" href="capabilities.html">Machines &amp; materials</a>
+            </div>
+          </div>
+          <div class="grid grid--2">
+        <article class="card tilt card--dark reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Confidential by default</h3>
+          <p>Mutual NDA on request before any file is opened. Your designs are never shown as our work without written permission.</p>
+        </article>
+        <article class="card tilt card--dark reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Checked, not hoped</h3>
+          <p>Dimensional check against your drawing, fit test where a mating part exists, and a photo set before dispatch.</p>
+        </article>
+        <article class="card tilt card--dark reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18M7 15l3-4 3 3 5-7"/></svg></div>
+          <h3>Pricing that falls with volume</h3>
+          <p>Per-unit rates step down at 10, 25, 50, 100, 250 and 500 pieces. The quote shows every break.</p>
+        </article>
+        <article class="card tilt card--dark reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></svg></div>
+          <h3>Delivered on a date</h3>
+          <p>Committed dispatch dates, staggered deliveries for large runs, and dispatch photos for every batch.</p>
+        </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist">
+      <div class="shell">
+        <div class="sec-head center">
+          <p class="eyebrow">Why people come back</p>
+          <h2>The boring things, done properly</h2>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><b data-count="24" data-suffix="h">24h</b><span>Quote turnaround</span></div>
+          <div class="stat"><b data-count="10" data-suffix="+">10+</b><span>Materials in stock</span></div>
+          <div class="stat"><b data-count="0.05" data-suffix=" mm">0.05 mm</b><span>Finest layer</span></div>
+          <div class="stat"><b>1&ndash;10k</b><span>Order size range</span></div>
+        </div>
+        <div class="grid grid--3" style="margin-top:24px">
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>We answer</h3>
+          <p>An enquiry that goes unanswered for four days is a lost job for you as much as for us. Ours come back within one working day, with a real answer.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>We tell you when it is a bad idea</h3>
+          <p>If a wall is too thin to survive shipping, or resin is wrong for a part that lives in a car, you hear it before you pay, not after.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5.3 5.3l-8 8a2.8 2.8 0 0 1-4-4z"/></svg></div>
+          <h3>We fix it if it is wrong</h3>
+          <p>A part that does not match the approved spec gets reprinted at our cost. That is the whole policy.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sand section--tight">
+      <div class="shell">
+        <div class="sec-head center">
+          <p class="eyebrow">Common questions</p>
+          <h2>Before you ask</h2>
+        </div>
+      <div class="acc reveal">
+        <div class="acc__item is-open">
+          <h3 style="margin:0"><button class="acc__q" type="button" aria-expanded="true">I do not have a 3D file. Can you still make it?</button></h3>
+          <div class="acc__a"><div><p>Yes, and that is most orders. Send a photograph, a sketch on paper, a product link or a written description. We build the 3D model for you and share a render for approval before printing. Modelling is quoted separately only when the part is complex — simple pieces are usually absorbed into the job.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <h3 style="margin:0"><button class="acc__q" type="button" aria-expanded="false">What is the smallest order you accept?</button></h3>
+          <div class="acc__a"><div><p>One piece. There is no minimum quantity. There is a minimum order value so that a two-rupee keychain does not cost us more in packing than it earns, and it is small.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <h3 style="margin:0"><button class="acc__q" type="button" aria-expanded="false">How long does it take?</button></h3>
+          <div class="acc__a"><div><p>Typically 7 to 10 working days from design approval for a normal order. Simple pieces already modelled can be faster; large bulk runs and painted finishes take longer. You get a committed date with the quote, not an estimate.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <h3 style="margin:0"><button class="acc__q" type="button" aria-expanded="false">Can you match a specific colour or brand palette?</button></h3>
+          <div class="acc__a"><div><p>Within reason on raw filament, and closely on painted parts. For brand-critical colours we paint to a supplied reference and send a photo of the sample before the batch runs.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <h3 style="margin:0"><button class="acc__q" type="button" aria-expanded="false">Do you sign NDAs?</button></h3>
+          <div class="acc__a"><div><p>Yes. For product development, contract manufacturing and OEM work we will sign yours, or send ours, before any file is opened.</p></div></div>
+        </div>
+      </div>
+        <div class="center" style="margin-top:26px">
+          <a class="link-arrow reveal" href="faq.html">All questions answered <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--blue cta-band">
+      <div class="shell center">
+        <p class="eyebrow">Start here</p>
+        <h2>Tell us what you want to make.</h2>
+        <p class="lede">Send a sketch, a photo, a CAD file or just a paragraph describing it. You get a feasibility check and a price back within one working day.</p>
+        <div class="btn-row" style="margin-top:26px">
+          <a class="btn btn--ember" href="order.html">Upload your idea <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="btn btn--onDark" data-wa href="#">WhatsApp us <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.5A8.4 8.4 0 1 1 8 20.2z"/><path d="M8.5 9.2c.2 1.4 1 2.6 2 3.5s2.2 1.5 3.5 1.7l1-1.4 1.8.9-.3 1.6c-1.9.4-4-.5-5.6-2s-2.4-3.7-2-5.6l1.6-.3.9 1.8z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="assets/img/logo/atd-logo-horizontal-white.png" alt="All Things 3D" width="954" height="299">
+          <p>Because your ideas deserve to exist. Custom 3D printing, product development and small-batch manufacturing — from a single keepsake to a thousand-piece corporate order.</p>
+          <div class="footer__social">
+            <a data-ig href="https://www.instagram.com/allthings3d.in" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a data-wa href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.5A8.4 8.4 0 1 1 8 20.2z"/><path d="M8.5 9.2c.2 1.4 1 2.6 2 3.5s2.2 1.5 3.5 1.7l1-1.4 1.8.9-.3 1.6c-1.9.4-4-.5-5.6-2s-2.4-3.7-2-5.6l1.6-.3.9 1.8z"/></svg></a>
+            <a data-mail href="mailto:info.allthings3d@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="oem.html">OEM &amp; white-label</a></li>
+            <li><a href="oem.html#bulk">Bulk orders</a></li>
+            <li><a href="services.html#contract">Contract manufacturing</a></li>
+            <li><a href="services.html#corporate">Corporate gifting</a></li>
+            <li><a href="services.html#development">Product development</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Talk to us</h4>
+          <ul>
+            <li><a data-mail="text" href="mailto:info.allthings3d@gmail.com">info.allthings3d@gmail.com</a></li>
+            <li><a data-tel="text" href="tel:+917666004531">+91 76660 04531</a></li>
+            <li><a data-wa href="#">WhatsApp us</a></li>
+            <li><a data-ig href="https://www.instagram.com/allthings3d.in">@allthings3d.in</a></li>
+            <li style="margin-top:14px"><a href="order.html">Upload your idea &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> All Things 3D. Mumbai, India.</span>
+        <span><a href="faq.html">FAQ</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a> &nbsp;·&nbsp; <a href="order.html">Get a quote</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
